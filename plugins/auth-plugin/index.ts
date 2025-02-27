@@ -18,11 +18,13 @@ class AuthPlugin implements IPlugin {
         this.pluginSystem.registerRoute({
             route: "/login",
             component: Login,
+            apiRoute: "/api/login",
         });
 
         this.pluginSystem.registerRoute({
             route: "/success",
-            component: SuccessPage
+            component: SuccessPage,
+            apiRoute: "/api/logout",
         })
 
         this.pluginSystem.registerApiRoute({
@@ -48,6 +50,8 @@ class AuthPlugin implements IPlugin {
                         } else {
                             res.status(404).json({ message: "Invalid Credentials! Try Again." });
                         }
+                    } else {
+                        res.status(405).json({ message: "Method not allowed!"});
                     }
                     
                 } catch (error) {

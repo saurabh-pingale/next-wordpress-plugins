@@ -18,6 +18,7 @@ export async function getStaticProps() {
 
 export async function getStaticPaths() {
   const paths = Object.keys(pluginSystem.getAllRoutes());
+  
   return {
     paths,
     fallback: false,

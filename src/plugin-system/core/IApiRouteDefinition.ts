@@ -1,4 +1,4 @@
 export interface IApiRouteDefinition {
     route: string;
-    handler: (req: any, res: any) => void;
+    handler: (req: any, res: any) => {};
 }
