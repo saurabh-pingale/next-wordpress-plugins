@@ -5,6 +5,7 @@ import AuthPlugin from "./auth-plugin";
 import SearchPlugin from "./search-plugin";
 import ThemePlugin from "./theme-plugin";
 import NotificationPlugin from "./notification-plugin";
+import RatingPlugin from "./rating-plugin";
 
 const plugins = 
     [
@@ -15,6 +16,7 @@ const plugins =
         SearchPlugin,
         ThemePlugin,
         NotificationPlugin,
+        RatingPlugin
     ];
 
 export default plugins;
